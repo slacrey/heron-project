@@ -1,0 +1,17 @@
+{
+    "cacheFile": "ehcache-storage.xml",
+    "driverClass": "org.gjt.mm.mysql.Driver",
+    "jdbcUrl": "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8",
+    "username": "root",
+    "password": "root",
+    "partitionCount": 5,
+    "minConnectionsPerPartition": 5,
+    "maxConnectionsPerPartition": 20,
+    "acquireIncrement": 2,
+    "poolAvailabilityThreshold": 20,
+    "releaseHelperThreads": 3,
+    "statementReleaseHelperThreads": 0,
+    "idleConnectionTestPeriod": 60,
+    "idleMaxAge": 240,
+    "statementsCacheSize": 5
+}

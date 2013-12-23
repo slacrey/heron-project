@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>22222222222</title>
+        <meta charset="UTF-8">
+    </head>
+	<body>
+		十大  bew
+		<br/>
+		The extension is ${description}
+        <br/>
+        <form enctype="multipart/form-data" action="${contextPath}/decorated/upload" method="post">
+            <input type="text" name="name" >
+            <input type="file" name="upload">
+            <input type="submit" name="sum" value="提交">
+        </form>
+    <br/>
+        <ul>
+            @foreach{item : persons}
+            <li class="item">${item.id}-${item.name}</li>
+            @end{}
+        </ul>
+	</body>
+</html>

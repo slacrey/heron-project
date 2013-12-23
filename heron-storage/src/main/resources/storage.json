@@ -1,0 +1,18 @@
+{
+    "cacheFile": "ehcache-storage.xml",
+    "driverClass": "org.hsqldb.jdbcDriver",
+    "jdbcUrl": "jdbc:hsqldb:mem:test;sql.syntax_mys=true",
+    "username": "sa",
+    "password": "",
+    "partitionCount": 5,
+    "minConnectionsPerPartition": 5,
+    "maxConnectionsPerPartition": 20,
+    "acquireIncrement": 2,
+    "poolAvailabilityThreshold": 20,
+    "connectionTimeout": 10000,
+    "releaseHelperThreads": 3,
+    "statementReleaseHelperThreads": 0,
+    "idleConnectionTestPeriod": 60,
+    "idleMaxAge": 240,
+    "statementsCacheSize": 5
+}

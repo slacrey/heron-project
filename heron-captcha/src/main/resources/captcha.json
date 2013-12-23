@@ -1,0 +1,92 @@
+{
+    "className": "com.octo.captcha.service.multitype.GenericManageableCaptchaService",
+    "imageEngine": {
+        "className": "com.octo.captcha.engine.GenericCaptchaEngine",
+        "captchaFactory": {
+            "className": "com.octo.captcha.image.gimpy.GimpyFactory",
+            "wordGen": {
+                "className": "com.octo.captcha.component.word.wordgenerator.RandomWordGenerator",
+                "text": "qwertyuiopasdfghjklzxcvbnm1234567890"
+            },
+            "wordToImage": {
+                "className": "com.octo.captcha.component.image.wordtoimage.ComposedWordToImage",
+                "fontGenRandom": {
+                    "className": "com.octo.captcha.component.image.fontgenerator.RandomFontGenerator",
+                    "fonts": [
+                        {
+                            "name": "Arial",
+                            "style": 0,
+                            "size": 12
+                        },
+                        {
+                            "name": "Tahoma",
+                            "style": 0,
+                            "size": 12
+                        },
+                        {
+                            "name": "Verdana",
+                            "style": 0,
+                            "size": 12
+                        },
+                        {
+                            "name": "Comic sans MS",
+                            "style": 0,
+                            "size": 12
+                        },
+                        {
+                            "name": "Lucida console",
+                            "style": 0,
+                            "size": 12
+                        }
+                    ],
+                    "minFontSize": 9,
+                    "maxFontSize": 12
+                },
+                "backgroundGen": {
+                    "className": "com.octo.captcha.component.image.backgroundgenerator.MultipleShapeBackgroundGenerator",
+                    "width": 100,
+                    "height": 20,
+                    "firstEllipseColor": {
+                        "red": 30,
+                        "green": 42,
+                        "blue": 125
+                    },
+                    "secondEllipseColor": {
+                        "red": 30,
+                        "green": 42,
+                        "blue": 125
+                    },
+                    "spaceBetweenLine": 1,
+                    "spaceBetweenCircle": 5,
+                    "ellipseHeight": 30,
+                    "ellipseWidth": 40,
+                    "firstRectangleColor": {
+                        "red": 30,
+                        "green": 42,
+                        "blue": 125
+                    },
+                    "secondRectangleColor": {
+                        "red": 30,
+                        "green": 42,
+                        "blue": 125
+                    },
+                    "rectangleWidth": 1
+                },
+                "randomText": {
+                    "className": "com.octo.captcha.component.image.textpaster.RandomTextPaster",
+                    "minAcceptedWordLength": 4,
+                    "maxAcceptedWordLength": 6,
+                    "rangeColorGen": {
+                        "className": "com.octo.captcha.component.image.color.RandomRangeColorGenerator",
+                        "redComponentRange": [0,120,150,200,250,255],
+                        "greenComponentRange": [0,30,60,90,250,255],
+                        "blueComponentRange": [0,30,60,90,120,250,255],
+                        "alphaComponentRange": [255,255]
+                    }
+                }
+            }
+        }
+    },
+    "timeOut": 180,
+    "concurrentCount": 10000
+}
